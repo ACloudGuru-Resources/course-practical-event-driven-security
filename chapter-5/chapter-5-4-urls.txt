@@ -1,0 +1,2 @@
+https://lucene.apache.org/core/2_9_4/queryparsersyntax.html
+https://docs.aws.amazon.com/macie/latest/userguide/macie-research.html

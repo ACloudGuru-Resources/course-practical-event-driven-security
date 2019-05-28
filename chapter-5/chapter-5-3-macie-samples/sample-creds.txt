@@ -1,0 +1,4 @@
+# Safely Deactivated AWS keys as Samples
+[default]
+aws_access_key_id = AKIA4GTPGRJMGZUMU2QD
+aws_secret_access_key = I2HdnsBU9bBYQ0RipvAmnH8gYUGwb7R+ZHSODdCh
