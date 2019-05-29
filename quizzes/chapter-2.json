@@ -1,0 +1,75 @@
+[
+  {
+    "question": "Do you need to set up a Trail before CloudTrail begins to record events?",
+    "answers": ["yes", "no"],
+    "correct": ["no"]
+  },
+  {
+    "question": "Which of the following services can you enable detailed 'data events' on, if you configure a Trail?",
+    "answers": ["S3", "Lambda", "EC2", "CloudWatch"],
+    "correct": ["S3", "Lambda"]
+  },
+  {
+    "question": "How long is CloudTrail activity stored, if no Trails are enabled?",
+    "answers": ["30 days", "45 days", "90 days", "180 days"],
+    "correct": ["90 days"]
+  },
+  {
+    "question": "Which of the following event fields is NOT one you can filter on using the CloudTrail console?",
+    "answers": ["Username", "Resource Type", "Event Name", "AWS Account ID"],
+    "correct": "AWS Account ID"
+  },
+  {
+    "question": "Which two ways allow you to collect CloudTrail logs from multiple AWS Accounts?",
+    "answers": [
+      "Enable 'Consolidated Security' through the IAM console",
+      "Add all of your known AWS Account IDs in the multi-account configuration section of the CloudTrail console",
+      "Click the 'Apply Trail to Organization' button when creating a new Trail",
+      "Create an S3 bucket in a central account, and configure trails in child accounts to send their logs there"
+    ],
+    "correct": [
+      "Click the 'Apply Trail to Organization' button when creating a new Trail",
+      "Create an S3 bucket in a central account, and configure trails in child accounts to send their logs there"
+    ]
+  },
+  {
+    "question": "Which of the following events would you NOT be able to monitor with CloudTrail?",
+    "answers": [
+      "An IAM Policy was modified",
+      "An EC2 instance was destroyed",
+      "An S3 bucket policy was added",
+      "An application on EC2 encountered a runtime error"
+    ],
+    "correct": ["An application on EC2 encountered a runtime error"]
+  },
+  {
+    "question": "How often will CloudTrail usually deliver logs to your S3 bucket, if a trail is enabled?",
+    "answers": [
+      "Every 30 seconds",
+      "Every 5 minutes",
+      "Every hour",
+      "Twice a day"
+    ],
+    "correct": ["Every 5 minutes"]
+  },
+  {
+    "question": "Which service can be used to run advanced queries on stored CloudTrail logs?",
+    "answers": ["Athena", "Redshift", "DynamoDB", "AWS Glue"],
+    "correct": ["Athena"]
+  },
+  {
+    "question": "If you create a Trail in CloudTrail, will it record events in all regions?",
+    "answers": [
+      "Yes, it will immediately begin recording events in all regions",
+      "Yes, but only if you configure it to be a mult-region trail",
+      "Yes, but only if you configure it to be an organization trail",
+      "No, a Trail can only record events in one region"
+    ],
+    "correct": ["Yes, but only if you configure it to be a mult-region trail"]
+  },
+  {
+    "question": "Are you still billed if you turn off logging for a Trail, but don't delete it?",
+    "answers": ["Yes", "No"],
+    "correct": ["No"]
+  }
+]
