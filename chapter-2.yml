@@ -1,0 +1,253 @@
+# Cloudtrail
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "Do you need to set up a Trail before CloudTrail begins to record events?",
+  ​answers:
+  - text: Yes
+  - text: No
+      correct: true
+  explanation: CloudTrail will automatically begin to log events in your AWS account with no configuration required. If you want to save logs for more than 90 days, you will need to enable a cloudtrail.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "Which of the following services can you enable detailed 'data events' on, if you configure a Trail?"
+  ​answers:
+  - text: S3
+      correct: true
+  - text: EC2
+  - text: Lambda
+      correct: true
+  - text: CloudWatch
+  explanation: CloudTrail can collect additional data events for S3 and Lambda, but it will increase the price.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "How long is CloudTrail activity stored, if no Trails are enabled?"
+  ​answers:
+  - text: 30 Days
+  - text: 45 Days
+  - text: 90 Days
+      correct: true
+  - text: 180 Days
+  explanation: Cloudtrail will only keep logs for 90 days, unless you set up a Trail.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following event fields is NOT one you can filter on using the CloudTrail console?
+  ​answers:
+  - text: Username
+  - text: Resource Type
+  - text: Event Name
+  - text: AWS Account ID
+      correct: true
+  explanation: You can't filter based on AWS Account ID through the CloudTrail console. If you're storing logs from multiple account in S3 though, you can use Athena to query for logs from a specific account.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "Which two ways allow you to collect CloudTrail logs from multiple AWS Accounts?"
+  ​answers:
+  - text: "Enable 'Consolidated Security' through the IAM console"
+  - text: "Add all of your known AWS Account IDs in the multi-account configuration section of the CloudTrail console"
+  - text: "Click the 'Apply Trail to Organization' button when creating a new Trail"
+      correct: true
+  - text: "Create an S3 bucket in a central account, and configure trails in child accounts to send their logs there"
+      correct: true
+  explanation: Collecting CloudTrail logs from multiple accounts can either be done by creating an AWS Organization and Organization Trail, or modifying the S3 bucket policy where you store the logs.
+  links:
+  - title: CloudTrail Cross Account
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html
+  - title: Organization CloudTrail
+    url:   links:
+  - title: CloudTrail Cross Account
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-trail-organization.html
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 6
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "2"
+  question: "Which of the following events would you NOT be able to monitor with CloudTrail?"
+  ​answers:
+  - text: "An IAM Policy was modified"
+  - text: "An EC2 instance was destroyed"
+  - text: "An S3 bucket policy was added"
+  - text: "An application on EC2 encountered a runtime error"
+      correct: true
+  explanation: If an application on an EC2 instance encounters an error, it won't result in an AWS API call. CloudTrail only records events that are AWS API calls.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 7
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: How often will CloudTrail usually deliver logs to your S3 bucket, if a trail is enabled?"
+  ​answers:
+  - text: "Every 30 seconds"
+  - text: "Every 5 minutes"
+      correct: true
+  - text: "Every hour"
+  - text: "Twice a day"
+  explanation: CloudTrail will deliver logs to your S3 bucket about every 5 minutes.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 8
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "Which service can be used to run advanced queries on stored CloudTrail logs?"
+  ​answers:
+  - text: "Athena"
+  - text: "Redshift"
+      correct: true
+  - text: "DynamoDB"
+  - text: "AWS Glue"
+  explanation: Redshift can be used to run advanced queries on logs stored in S3.
+  links:
+  - title: Querying CloudTrail With Athena
+    url: https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 9
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "If you create a Trail in CloudTrail, will it record events in all regions?"
+  ​answers:
+  - text: "Yes, it will immediately begin recording events in all regions"
+  - text: "Yes, but only if you configure it to be a mult-region trail"
+      correct: true
+  - text: "Yes, but only if you configure it to be an organization trail"
+  - text: "No, a Trail can only record events in one region"
+  explanation: By default, a Trail will only record events in one region. You can configure it to be a multi-region trail though.
+  links:
+  - title: CloudTrail in Multiple Regions
+    url: https://aws.amazon.com/blogs/aws/aws-cloudtrail-update-turn-on-in-all-regions-use-multiple-trails/
+  tags:
+  - CloudTrail
+---
+guid:
+  QuestionNo: 10
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "Are Data Events (advanced S3 and Lambda logging) enabled by default in CloudTrail?"
+  ​answers:
+  - text: "Yes"
+  - text: "No"
+      correct: true
+  explanation: By default, data events for S3 and Lambda are disabled. Enabling them will increase the cost of CloudTrail.
+  links:
+  - title: CloudTrail FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  tags:
+  - CloudTrail

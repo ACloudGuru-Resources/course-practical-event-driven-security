@@ -1,0 +1,249 @@
+# Macie
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: What two services does Macie help to monitor?
+  ​answers:
+  - text: RDS
+  - text: S3
+      correct: true
+  - text: CloudFormation
+  - text: CloudTrail
+      correct: true
+  explanation: Macie focuses on analyzing S3 object types, and suspicious CloudTrail activity.
+  links:
+  - title: Macie FAQ
+    url: https://aws.amazon.com/macie/faq/
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which two regions are currently supported by AWS Macie?
+  ​answers:
+  - text: us-east-1
+      correct: true
+  - text: eu-west-1
+  - text: us-west-2
+      correct: true
+  - text: ca-central-1
+  explanation: Currently only us-east-1 and us-west-2 are supported regions for Macie.
+  links:
+  - title: Macie FAQ
+    url: https://aws.amazon.com/macie/faq/
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: True or False? AWS Macie will scan all of your S3 buckets by default, and you need to configure it if there are any buckets you wish to omit.
+  ​answers:
+  - text: "True"
+  - text: "False"
+      correct: true
+  explanation: False. Macie will not scan any buckets by default, and needs to be configured to scan the buckets you want.
+  links:
+  - title: Enabling Macie
+    url: https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: True or False? Macie can be used to aggregate data from multiple accounts.
+  ​answers:
+  - text: "True"
+      correct: true
+  - text: "False"
+  explanation: True. Macie can be set up to aggregate data from multiple accounts.
+  links:
+  - title: AWS Macie Member Accounts
+    url: https://docs.aws.amazon.com/macie/latest/userguide/macie-integration.html
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following can Macie help detect in your S3 buckets?
+  ​answers:
+  - text: API Keys
+  - text: Source Code
+  - text: PII data
+  - text: All of the above
+      correct: true
+  explanation: Macie can detect and classify items in S3 buckets, including all of the above types.
+  links:
+  - title: Macie FAQ
+    url: https://aws.amazon.com/macie/faq/
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 6
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Will AWS Macie automatically remove any API keys it finds in S3?
+  ​answers:
+  - text: "Yes"
+  - text: "No"
+      correct: true
+  explanation: "Macie can help detect uploaded keys, but it won't automatically remove them for you."
+  links:
+  - title: Macie FAQ
+    url: https://aws.amazon.com/macie/faq/
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 7
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which services can help you receive a notification when Macie produces a new finding?
+  ​answers:
+  - text: CloudTrail
+  - text: CloudWatch
+      correct: true
+  - text: IAM
+  - text: SNS
+      correct: true
+  explanation: Using CloudWatch and SNS, you can set up a notification for when Macie produces a new finding.
+  links:
+  - title: Macie FAQ
+    url: https://aws.amazon.com/macie/faq/
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 8
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Macie assigns a "Risk Value" of any items it analyzes in S3. What is the minimum and maximum risk values Macie uses?
+  ​answers:
+  - text: "1 - 10"
+      correct: true
+  - text: "1 - 50"
+  - text: "1 - 100"
+  - text: "1 - 1000"
+  explanation: Macie will assign each object a risk level between 1 - 10.
+  links:
+  - title: Macie Content Types
+    url: https://docs.aws.amazon.com/macie/latest/userguide/macie-classify-objects-content-type.html
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 9
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: You received a Macie notification that an IAM secret key has been uploaded to S3. Which of the following are valid remediation actions?
+  ​answers:
+  - text: Move the secret key to a service better suited for storing secrets, like Secrets Manager.
+      correct: true
+  - text: Make sure to encrypt the secret in the S3 bucket, using an S3 managed KMS key.
+  - text: If possible, delete the IAM user associated with the key, and use a role for your application instead.
+      correct: true
+  - text: There's no issue storing IAM keys in S3. No remediation actions are needed.
+  explanation: If possible, the best approach is not to use IAM keys for your services, and instead use IAM roles. If your service really needs a IAM key, it's best to pull it from a service like Secrets Manager, rather than leaving it in an S3 bucket.
+  # links:
+  # - title: Macie Content Types
+  #   url: https://docs.aws.amazon.com/macie/latest/userguide/macie-classify-objects-content-type.html
+  tags:
+  - Macie
+---
+guid:
+  QuestionNo: 10
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Macie categorizes users in your AWS account based on the importance of their API calls. What are the 4 levels Macie uses to group these users?
+  ​answers:
+  - text: A, B, C, D
+  - text: Developer, DevOps, Admin, Account Owner
+  - text: Bronze, Silver, Gold, Platinum
+      correct: true
+  - text: Novice, Intermediate, Expert, Admin
+  explanation: If possible, the best approach is not to use IAM keys for your services, and instead use IAM roles. If your service really needs a IAM key, it's best to pull it from a service like Secrets Manager, rather than leaving it in an S3 bucket.
+  links:
+  - title: Macie User Clasification
+    url: https://docs.aws.amazon.com/macie/latest/userguide/macie-users.html#macie-users-categories
+  tags:
+  - Macie

@@ -1,0 +1,282 @@
+# GuardDuty
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: What two services does guardduty help to monitor?
+  ​answers:
+  - text: RDS
+  - text: VPC Flowlogs
+      correct: true
+  - text: CloudFormation
+  - text: CloudTrail
+      correct: true
+  explanation: GuardDuty helps to detect issues by monitoring your CloudTrail and VPC Flowlogs
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Is GuardDuty a regional or global service?
+  ​answers:
+  - text: Regional
+      correct: true
+  - text: Global
+  - text: Depends on how the service is configured.
+  explanation: GuardDuty will only monitor services in the region is it configured in. You can configure it in multiple regions though.
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Do you need to enable CloudTrail or VPC Flow logs in your account before enabling GuardDuty?
+  ​answers:
+  - text: "Yes, you need to enable both."
+  - text: "No, GuardDuty can pull logs from both without any additional configuration."
+      correct: true
+  - text: "You need to enable CloudTrail first, but not VPC Flowlogs"
+  - text: "You need to enable VPC Flowlogs first, but not CloudTrail"
+  explanation: GuardDuty pulls data from these services automatically, and you don't need to enable them before using GuardDuty.
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following issues could GuardDuty help detect?
+  ​answers:
+  - text: "An EC2 instance in your account has been compromised, and is sending data to bad IP addresses."
+      correct: true
+  - text: "IAM Credentials have become compromised, and are being used from an abnormal area of the world."
+      correct: true
+  - text: "Someone is scanning your EC2 instance ports, attempting to find an opening."
+      correct: true
+  - text: "Someone has accidently uploaded AWS Secret Keys to S3"
+  explanation: GuardDuty can help detect all these issues, except for uploading keys to S3. AWS Macie is a service that can help analyze and classify S3 object types.
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following does GuardDuty use to help whitelist and blacklist IP addresses in its threat engine?
+  ​answers:
+  - text: Trusted IP Lists
+      correct: true
+  - text: Friendly IP Lists
+  - text: Threat Lists
+      correct: true
+  - text: Malicious IP Lists
+  explanation: GuardDuty uses Trusted IP Lists and Threat Lists to help it better filter events with IP addresses.
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 6
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: "True or False? GuardDuty can help aggregate findings from multiple accounts."
+  ​answers:
+  - text: True
+      correct: true
+  - text: False
+  explanation: GuardDuty can send its evaluations to a "Master" GuardDuty account, which can aggregate results from multiple AWS Accounts.
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 7
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which services can help notify you when GuardDuty produces findings?
+  ​answers:
+  - text: CloudTrail
+  - text: CloudWatch
+      correct: true
+  - text: IAM
+  - text: SNS
+      correct: true
+  explanation: You can set up a CloudWatch rule for GuardDuty findings, and send yourself a notification using email or text with SNS.
+  links:
+  - title: GuardDuty FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 8
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following are valid GuardDuty finding types?
+  ​answers:
+  - text: CryptoCurrency:EC2/BitcoinTool.B!DNS
+      correct: true
+  - text: Backdoor:EC2/DenialOfService.Tcp
+      correct: true
+  - text: UnauthorizedAccess:EC2/SSHBruteForce
+      correct: true
+  - text: ExcessiveInvocations:Lambda/ThrottlingLimit
+  explanation: GuardDuty can produce plenty of different finding types. However it mainly focuses on EC2 instances, so it won't monitor something like the number of AWS Lambda invocations you perform.
+  links:
+  - title: GuardDuty Finding Types
+    url: https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 9
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: You've received a GuardDuty notification that an EC2 instance you have is being used to mine bitcoin, which you didn't intend. What would be a valid remediation step in this case?
+  ​answers:
+  - text: Add a Security Group rule to the EC2 instance, preventing it from sending its bitcoin results out.
+  - text: Use a product that helps detect and remove malware on the instance.
+      correct: true
+  - text: Rebuild the instance from trusted sources, and ensure that it receives a new key pair.
+      correct: true
+  - text: Make an AMI of the compromised instance so you don't lose data, and create a new instance from the AMI.
+  explanation: Adding a security group might help, but you'll still have malicious software on the instance. This isn't a true fix. Either removing the malware or rebuilding the instance are both better options. Trying to save data by creating an AMI is likely to just move the malware along with your application.
+  links:
+  - title: GuardDuty Remediation
+    url: https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_remediate.html#compromised-ec2
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 10
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: You've received a GuardDuty notification that an EC2 instance you have is being used to mine bitcoin, which you didn't intend. What would be a valid remediation step in this case?
+  ​answers:
+  - text: Add a Security Group rule to the EC2 instance, preventing it from sending its bitcoin results out.
+  - text: Use a product that helps detect and remove malware on the instance.
+      correct: true
+  - text: Rebuild the instance from trusted sources, and ensure that it receives a new key pair.
+      correct: true
+  - text: Make an AMI of the compromised instance so you don't lose data, and create a new instance from the AMI.
+  explanation: Adding a security group might help, but you'll still have malicious software on the instance. This isn't a true fix. Either removing the malware or rebuilding the instance are both better options. Trying to save data by creating an AMI is likely to just move the malware along with your application.
+  links:
+  - title: GuardDuty Remediation
+    url: https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_remediate.html#compromised-ec2
+  tags:
+  - GuardDuty
+---
+guid:
+  QuestionNo: 10
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following best describes GuardDuty pricing?
+  ​answers:
+  - text: GuardDuty charges you for the amount of CloudTrail logs monitored, but VPC flow logs are free.
+  - text: GuardDuty is a flat rate each month, and the amount of events scanned doesn't affect the price.
+  - text: GuardDuty charges you based on usage up to $50 each month, but will never charge more than $50.
+  - text: GuardDuty charges you based on usage, based on the quantity of CloudTrail and VPC Flow log events monitored.
+      correct: true
+  explanation: Adding a security group might help, but you'll still have malicious software on the instance. This isn't a true fix. Either removing the malware or rebuilding the instance are both better options. Trying to save data by creating an AMI is likely to just move the malware along with your application.
+  links:
+  - title: GuardDuty Pricing
+    url: https://aws.amazon.com/guardduty/pricing/
+  tags:
+  - GuardDuty

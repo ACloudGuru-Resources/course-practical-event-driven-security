@@ -1,0 +1,101 @@
+# CloudWatch
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: True or False. CloudTrail will automatically send its logs to CloudWatch whenever you create a trail.
+  ​answers:
+  - text: True
+  - text: False
+      correct: true
+  explanation: False. You need to configure any Trail to send its logs to a CloudWatch log group.
+  links:
+  - title: Monitoring CloudTrail with CloudWatch
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/monitor-cloudtrail-log-files-with-cloudwatch-logs.html
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "2"
+  question: Which of the following is a valid Metric Filter Pattern?
+  ​answers:
+  - text: "SELECT * FROM $.eventType"
+  - text: "{ $.eventType = "UpdateTrail" }"
+      correct: true
+  - text: "USER == ROOT && TIME < 2020-01-01"
+  - text: ".event[user->{lastname.firstname}]"
+  explanation: CloudWatch uses a specific query syntax to make Metric Filter Patterns.
+  links:
+  - title: CloudWatch Filter Syntax
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "3"
+  question: Which of the following are valid targets for a CloudWatch rule?
+  ​answers:
+  - text: Invoke a Lambda
+      correct: true
+  - text: Delete an IAM User
+  - text: Send a message to an SNS Topic
+      correct: true
+  - text: Remediate Issue
+  explanation: CloudWatch rules can trigger Lambdas and SNS Topics, along with some other service integrations. Deleting an IAM user or remediating an issue can't be done directly from CloudWatch, but you might be able to trigger a lambda to do either.
+  links:
+  - title: CloudWatch Events
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "3"
+  question: Which of the following alarm targets can help send a custom email?
+  ​answers:
+  - text: 
+  - text: SNS
+      correct: true
+  - text: Send a message to an SNS Topic
+      correct: true
+  - text: Remediate Issue
+  explanation: CloudWatch rules can trigger Lambdas and SNS Topics, along with some other service integrations. Deleting an IAM user or remediating an issue can't be done directly from CloudWatch, but you might be able to trigger a lambda to do either.
+  links:
+  - title: CloudWatch Events
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html
+  tags:
+  - CloudWatch
