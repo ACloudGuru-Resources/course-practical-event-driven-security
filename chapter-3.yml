@@ -85,17 +85,165 @@ guid:
     - 2
   difficulty: M
   questiontype​: "3"
-  question: Which of the following alarm targets can help send a custom email?
+  question: Which of the following alarm targets can help send an email?
   ​answers:
-  - text: 
-  - text: SNS
+  - text: SQS
+  - text: SNS Topic
       correct: true
-  - text: Send a message to an SNS Topic
-      correct: true
-  - text: Remediate Issue
-  explanation: CloudWatch rules can trigger Lambdas and SNS Topics, along with some other service integrations. Deleting an IAM user or remediating an issue can't be done directly from CloudWatch, but you might be able to trigger a lambda to do either.
+  - text: Kinesis Stream
+  - text: ECS Task
+  explanation: SNS topics can send messages to subscribers. This can be used to send emails or texts.
   links:
-  - title: CloudWatch Events
-    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html
+  - title: SNS FAQ
+    url: https://aws.amazon.com/sns/faqs/
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: CloudWatch groups logs it collects into a Log Group. Inside a Log Group, CloudWatch further groups logs into sequences of events. What are these called?
+  ​answers:
+  - text: Kinesis Streams
+  - text: Log Units
+  - text: Log Streams
+      correct: true
+  - text: Application Streams
+  explanation: False. You need to configure any Trail to send its logs to a CloudWatch log group.
+  links:
+  - title: Log Groups and Streams
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 6
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Your organization wants to start being sent an email whenever the root user of an AWS Account logs in. How could you accomplish this?
+  ​answers:
+  - text: Set up CloudTrail to send its logs to S3. Use AWS Athena to query events performed by the root user.
+  - text: Set up Advanced IAM Monitoring in the IAM console.
+  - text: Set up MFA on your root user.
+  - text: Set up CloudTrail to send its logs to CloudWatch. Use a CloudWatch a Metric Filter and Alarm to filter on events by a root user. Have the Alarm send a notification.
+      correct: true
+  explanation: Athena can find events made by the root user, but there will be quite a delay and this doesn't report it automatically. Advanced IAM Monitoring isn't a service, unfortunately. Setting up MFA for your root user is a great idea, but doesn't help to monitor activity.
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 7
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following states are valid for a CloudWatch Alarm?
+  ​answers:
+  - text: ALARM
+      correct: true
+  - text: OK
+      correct: true
+  - text: INSUFFICIENT DATA
+      correct: true
+  - text: NON-COMPLIANT
+  explanation: NON-COMPLIANT is not a valid state for an AWS Alarm, but is a valid state for an AWS Config evaluation.
+  links:
+  - title: CloudWatch Alarms
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 8
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: What service allows you to better monitor the status of multiple CloudWatch metrics?
+  ​answers:
+  - text: CloudWatch Rules
+  - text: CloudWatch Dashboard
+      correct: true
+  - text: CloudWatch Alarms
+  - text: CloudMetrics
+  explanation: CloudWatch Dashboard
+  links:
+  - title: CloudWatch Dashboards
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html
+  tags:
+  - CloudWatch
+---
+guid:
+  QuestionNo: 9
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Someone in your organization is complaining that they get too many notifications for AuthorizationFailures. What could you do to decrease the amount of emails, but still be alerted if lots of authorization failures occur?
+  ​answers:
+  - text: Increase the threshold of the alarm from AuthorizationFailureCount >= 1.
+      correct: true
+  - text: Remove all subscribers from the SNS Topic.
+  - text: Have the person mark the email as spam in their inbox.
+  - text: Set the SNS Topic to "Important Only" mode.
+  explanation: Increasing the threshold of the alarm is the best solution, as it will help eliminate noise. Removing all subscribers from SNS would make it so nobody received emails. Having the person mark the message as spam just help silence the problem, but doesn't solve it. An "Important Only" mode for SNS might sound like an answer, but isn't something SNS provides.
+  links:
+  - title: CloudWatch Alarms
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
+  tags:
+  - CloudWatch
+---
+  QuestionNo: 10
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: CloudWatch lets you treat missing data points for metrics in different ways. Which of the following is not a valid way to treat missing data?
+  ​answers:
+  - text: good
+  - text: bad
+  - text: ignore
+  - text: irregular
+      correct: true
+  - text: missing
+  explanation: CloudWatch lets you treat missing data as good, bad, ignore, or missing.
+  links:
+  - title: CloudWatch Alarms
+    url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
   tags:
   - CloudWatch

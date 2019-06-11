@@ -1,0 +1,249 @@
+# AWS Config
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Is AWS Config a regional or global service?
+  ​answers:
+  - text: Regional
+      correct: true
+  - text: Global
+  - text: Depends on the configuration used
+  - text: Depends on the resources being analyzed 
+  explanation: AWS Config must be enabled on a region by region basis.
+  links:
+  - title: Config FAQ
+    url: https://aws.amazon.com/config/faq/
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which two types of triggers do AWS Config Rules support?
+  ​answers:
+  - text: Configuration Changes
+      correct: true
+  - text: Resource Restarts
+  - text: Periodic Triggers
+      correct: true
+  - text: Exponential Backoff Changes
+  explanation: AWS Config rules can be triggered based on periodically, as well as on configuration changes.
+  links:
+  - title: Config FAQ
+    url: https://aws.amazon.com/config/faq/
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following Compliance Types is NOT one AWS Config will possibly use to report on a resource?
+  ​answers:
+  - text: COMPLIANT
+  - text: NON_COMPLIANT
+  - text: INSUFFICIENT_DATA
+  - text: ERROR
+      correct: true
+  - text: NOT_APPLICABLE
+  explanation: AWS Config rules won't evaluate individual resources as having a status of "ERROR". If a rule fails to run though, you can see that an error occured in the AWS Config console.
+  links:
+  - title: Config CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/configservice/put-evaluations.html
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: True or False? AWS Config will prevent any actions in your account that would make a resource non-compliant?
+  ​answers:
+  - text: "True"
+  - text: "False"
+      correct: true
+  explanation: AWS Config rules will monitor resources, and can sometimes offer remediation steps, but will not prevent resources from being changed.
+  links:
+  - title: Config FAQ
+    url: https://aws.amazon.com/config/faq/
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following is not a valid frequency for an AWS Config periodic rule?
+  ​answers:
+  - text: 1 Hour
+  - text: 3 Hours
+  - text: 6 Hours
+  - text: 12 Hours
+  - text: 24 Hours
+  - text: 72 Hours
+      correct: true
+  explanation: AWS Config has a maximum periodic frequency of 24 hours currently.
+  links:
+  - title: Config CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/configservice/put-config-rule.html
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 6
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following are supported by AWS Config's aggregation feature?
+  ​answers:
+  - text: Aggregating results across regions
+  - text: Aggregating results across accounts
+  - text: Aggregating results within an AWS organization
+  - text: All of the above
+      correct: true
+  explanation: AWS Config can aggregate results across regions and AWS Accounts, including accounts that are within an organization.
+  links:
+  - title: Config FAQ
+    url: https://aws.amazon.com/config/faq/
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 7
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: True or False? When writing a custom rule for AWS Config, the rule must be written using Javascript/Node.
+  ​answers:
+  - text: "True"
+  - text: "False"
+      correct: true
+  explanation: Custom rules can be written in any language supported by AWS Lambda, including Python, .Net, and Go.
+  links:
+  - title: Config FAQ
+    url: https://aws.amazon.com/config/faq/
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 8
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: When writing a custom rule, which of the following does NOT need to be returned as part of an item in a "put-evaluations" call?
+  ​answers:
+  - text: ComplianceResourceType
+  - text: ComplianceResourceId
+  - text: ComplianceType
+  - text: ComplianceAccountNumber
+      correct: true
+  explanation: Results reported back must include a ResourceType, ResourceId, and ComplianceType (Compliant/Non_Compliant).
+  links:
+  - title: Config CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/configservice/put-evaluations.html
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 9
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following are valid remediation actions for AWS config rules?
+  ​answers:
+  - text: AWS-ConfigureS3BucketEncryption
+  - text: AWS-TerminateEC2Instance
+  - text: AWS-EnableCloudTrail
+  - text: AWS-AttachIAMToInstance
+  - text: All of the above
+      correct: true
+  explanation: AWS Config provides all the above remediation actions.
+  tags:
+  - AWS Config
+---
+guid:
+  QuestionNo: 10
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Which of the following is NOT a provided AWS Config rule?
+  ​answers:
+  - text: access-keys-rotated
+  - text: all-regions-have-cloudtrail
+      correct: true
+  - text: s3-bucket-logging-enabled
+  - text: desired-instance-type
+  explanation: Because AWS Config is a regional service, it wouldn't support a rule that checks resources across multiple regions.
+  links:
+  - title: Config FAQ
+    url: https://aws.amazon.com/config/faq/
+  tags:
+  - AWS Config
