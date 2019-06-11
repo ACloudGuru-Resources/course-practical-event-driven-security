@@ -1,0 +1,126 @@
+# AWS WAF
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which services are supported with AWS WAF?
+  ​answers:
+  - text: CloudFront
+      correct: true
+  - text: API Gateway
+      correct: true
+  - text: Application Load Balancer
+      correct: true
+  - text: EC2
+  explanation: AWS WAF cannot be used directly with EC2, but you could put EC2 behind an ALB.
+  links:
+  - title: AWS WAF FAQ
+    url: https://aws.amazon.com/waf/faqs/
+  tags:
+  - AWS WAF
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which of the following are valid conditions for AWS WAF?
+  ​answers:
+  - text: Cross-Site Scripting Match
+  - text: IP Match
+  - text: Geographic Match
+  - text: SQL Injection
+  - text: All of the above
+      correct: true
+  explanation: AWS WAF also supports string matching, and regex matching
+  links:
+  - title: Web ACL conditions
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-create-condition.html
+  tags:
+  - AWS WAF
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: Is AWS WAF regional or global?
+  ​answers:
+  - text: Regional
+  - text: Global
+  - text: Depends on if it is used with a CloudFront or not
+      correct: true
+  explanation: AWS WAF needs to be configured for a specific region if used with ALB or API Gateway, but if used with CloudFront is is configured globally.
+  links:
+  - title: Web ACL conditions
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-create-condition.html
+  tags:
+  - AWS WAF
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: M
+  questiontype​: "1"
+  question: You've noticed an unusually high amount of traffic coming from a single IP address. How can you limit the number of requests from an IP, without outright blocking the address?
+  ​answers:
+  - text: Add a rule to your security group denying access to the IP.
+  - text: Implement a rate-based rule with AWS WAF.
+      correct: true
+  - text: Modify a Network ACL to deny traffic from the IP.
+  - text: Apply throttling through Route 53
+  explanation: Modifying the security group or network ACL would deny all traffic. Route53 doesn't offer a throttling functionality
+  links:
+  - title: WAF Rate Based Rules
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/ddos-get-started-rate-based-rules.html
+  tags:
+  - AWS WAF
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: True or False? You can re-use a Web ACL across multiple Cloudfront distributions to help reduce costs.
+  ​answers:
+  - text: "True"
+      correct: true
+  - text: "False"
+  explanation: Reusing Web ACLs is a great way to help reduce costs.
+  links:
+  - title: AWS WAF Pricing
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/ddos-get-started-rate-based-rules.html
+  tags:
+  - AWS WAF
