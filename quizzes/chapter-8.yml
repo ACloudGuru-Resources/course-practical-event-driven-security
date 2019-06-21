@@ -1,0 +1,126 @@
+# Security Baseline
+---
+guid:
+  QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: What are the four main sections the CIS Benchmarks for AWS cover?
+  ​answers:
+  - text: User Management, Application Management, Networking Management, and Audit Management
+  - text: Identity and Access Management, Logging, Monitoring, and Networking
+      correct: true
+  - text: Credentials, Networking, Processes, and Source Control
+  - text: S3, EC2, CloudTrail, and CloudWatch
+  explanation: The CIS Benchmarks group controls into Identity and Access Management, Logging, Monitoring, and Networking sections
+  links:
+  - title: CIS Benchmarks
+    url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
+  tags:
+  - Security Baseline
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which CIS section does the following guideline belong to? "Ensure a log metric filter and alarm exist for unauthorized API calls."
+  ​answers:
+  - text: Identity and Access Management
+  - text: Logging
+  - text: Monitoring
+      correct: true
+  - text: Networking
+  explanation: The Monitoring CIS section provides guidelines for all metric filters and alarms
+  links:
+  - title: CIS Benchmarks
+    url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
+  tags:
+  - Security Baseline
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which CIS section does the following guideline belong to? "Ensure no root account access keys exist."
+  ​answers:
+  - text: Identity and Access Management
+      correct: true
+  - text: Logging
+  - text: Monitoring
+  - text: Networking
+  explanation: The IAM section provides guidance on users, groups, credentials, and access keys.
+  links:
+  - title: CIS Benchmarks
+    url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
+  tags:
+  - Security Baseline
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which CIS section does the following guideline belong to? "Ensure the default security group of every VPC restricts all traffic."
+  ​answers:
+  - text: Identity and Access Management
+  - text: Logging
+  - text: Monitoring
+  - text: Networking
+      correct: true
+  explanation: The Networking section provides guidance on how to set up VPCs, subnets, and security groups.
+  links:
+  - title: CIS Benchmarks
+    url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
+  tags:
+  - Security Baseline
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which CIS section does the following guideline belong to? "Ensure CloudTrail log file validation is enabled."
+  ​answers:
+  - text: Identity and Access Management
+  - text: Logging
+      correct: true
+  - text: Monitoring
+  - text: Networking
+  explanation: The Logging section provides guidelines for how to configure CloudTrail in your AWS accounts.
+  links:
+  - title: CIS Benchmarks
+    url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
+  tags:
+  - Security Baseline
