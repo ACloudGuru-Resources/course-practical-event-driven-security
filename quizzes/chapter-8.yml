@@ -1,7 +1,132 @@
-# Security Baseline
+# Security Hub
 ---
 guid:
   QuestionNo: 1
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which of the following are AWS Services can Security Hub receive alerts from?
+  ​answers:
+  - text: GuardDuty
+      correct: true
+  - text: Macie
+      correct: true
+  - text: Inspector
+      correct: true
+  - text: CloudTrail
+  explanation: Security Hub cannot integrate directly with CloudTrail at the moment.
+  links:
+  - title: Security Hub FAQ
+    url: https://aws.amazon.com/security-hub/faqs/
+  tags:
+  - Security Hub
+---
+guid:
+  QuestionNo: 2
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: True or False? AWS Security Hub is a global service.
+  ​answers:
+  - text: "True"
+  - text: "False"
+      correct: true
+  explanation: Security Hub is a regional service, and must be enabled in each region you wish to use it in.
+  links:
+  - title: Security Hub FAQ
+    url: https://aws.amazon.com/security-hub/faqs/
+  tags:
+  - Security Hub
+---
+guid:
+  QuestionNo: 3
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: True or False? AWS Security Hub can integrate with 3rd party security tools as well.
+  ​answers:
+  - text: "True"
+      correct: true
+  - text: "False"
+  explanation: There are a number of 3rd party services that can already integrate with AWS security hub. A full list can be seen at the provided link.
+  links:
+  - title: Security Hub Partners
+    url: https://aws.amazon.com/security-hub/partners/
+  tags:
+  - Security Hub
+---
+guid:
+  QuestionNo: 4
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: Which popular 3rd party security framework is automatically monitored when you enable Security Hub?
+  ​answers:
+  - text: Fedramp
+  - text: CIS Benchmarks
+      correct: true
+  - text: HIPAA
+  - text: NIST
+  explanation: Security Hub will begin to monitor your account to ensure it is CIS compliant. 
+  links:
+  - title: Security Hub FAQ
+    url: https://aws.amazon.com/security-hub/faqs/
+  tags:
+  - Security Hub
+---
+guid:
+  QuestionNo: 5
+  level: assoc
+  domain:
+    - monitoring
+  course:
+    - ToDo
+  section:
+    - 2
+  difficulty: L
+  questiontype​: "1"
+  question: True or False? If I have Security Hub enabled, that means my account is already 100% compliant to the CIS Benchmarks?
+  ​answers:
+  - text: True, so long as you've enabled Security Hub in each region.
+  - text: True, so long as you've also enabled Macie and GuardDuty integration.
+  - text: False, as Security Hub only monitors a small subsection of the CIS benchmarks.
+  - text: False, as Security Hub will monitor compliance, but will not fix issues automatically.
+      correct: true
+  explanation: False. Security Hub can only monitor, not remediate. There are also a couple CIS Benchmark controls that cannot currently be checked programmatically, and might need to be checked manually. Security Hub does check a very large majority of them though.
+  links:
+  - title: Security Hub FAQ
+    url: https://aws.amazon.com/security-hub/faqs/
+  - title: CIS Benchmarks
+    url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
+  tags:
+  - Security Hub
+---
+guid:
+  QuestionNo: 6
   level: assoc
   domain:
     - monitoring
@@ -23,10 +148,10 @@ guid:
   - title: CIS Benchmarks
     url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
   tags:
-  - Security Baseline
+  - Security Hub
 ---
 guid:
-  QuestionNo: 2
+  QuestionNo: 7
   level: assoc
   domain:
     - monitoring
@@ -48,10 +173,10 @@ guid:
   - title: CIS Benchmarks
     url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
   tags:
-  - Security Baseline
+  - Security Hub
 ---
 guid:
-  QuestionNo: 3
+  QuestionNo: 8
   level: assoc
   domain:
     - monitoring
@@ -73,10 +198,10 @@ guid:
   - title: CIS Benchmarks
     url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
   tags:
-  - Security Baseline
+  - Security Hub
 ---
 guid:
-  QuestionNo: 4
+  QuestionNo: 9
   level: assoc
   domain:
     - monitoring
@@ -98,10 +223,10 @@ guid:
   - title: CIS Benchmarks
     url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
   tags:
-  - Security Baseline
+  - Security Hub
 ---
 guid:
-  QuestionNo: 5
+  QuestionNo: 10
   level: assoc
   domain:
     - monitoring
@@ -123,4 +248,4 @@ guid:
   - title: CIS Benchmarks
     url: https://d1.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf
   tags:
-  - Security Baseline
+  - Security Hub
